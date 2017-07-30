@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper blue">
+            <a href="#" class="brand-logo"><img src="https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-128.png" /></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html"><i class="material-icons left">compare_arrows</i>Rattachement</a></li>
+                <li><a href="sass.html"><i class="material-icons left">trending_up</i>Analytics</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="sass.html"><i class="material-icons left">compare_arrows</i>Rattachement</a></li>
+                <li><a href="sass.html"><i class="material-icons left">trending_up</i>Analytics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <!-- Page Content goes here -->
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a class="active" href="#test1">PME Go</a></li>
+                    <li class="tab col s3"><a href="#test2">PME Match</a></li>
+                    <li class="tab col s3"><a href="#test3">PME Bonuus</a></li>
+                </ul>
+            </div>
+            <div id="test1" class="s12">
+
+                <div class="col s12 item" id="temoin" style="display:none">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Card Title</span>
+                            <a data-id="" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">delete</i></a>
+                            <p>Card Content</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m6" id="liste">
+
+                    <div class="preloader-wrapper active" id="loader">
+                        <div class="spinner-layer spinner-blue-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+                <div class="col s12 m6">
+                    <form id="addNew" class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="title" pattern=".{3,}" id="first_name" type="text" class="validate">
+                                <label for="title">Titre du message</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <textarea data-length="420" id="content" pattern=".{3,}" required class="materialize-textarea validate"></textarea>
+                                <label for="icon_prefix2">Contenu du message</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <p>
+                                    <label for="test5">Périmètre d'action</label>
+                                    <input id="perimetre" type="range" id="test5" min="10" max="100" />
+                                </p>
+                            </div>
+                            <div class="switch">
+                                <p>
+                                    <input value="true" id="enabled" checked type="checkbox" id="enabled" />
+                                    <label for="enabled">Activer la notification</label>
+                                </p>
+                            </div>
+
+                        </div>
+                        <button id="send" class="waves-effect pink waves-light btn"><i class="material-icons left">send</i> Envoyez l'annonce</button>
+
+                    </form>
+                </div>
+
+                <div id="test2" class="col s12">Test 2</div>
+                <div id="test3" class="col s12">Test 3</div>
+            </div>
+
+
+        </div>
+
+
+
+        <footer class="page-footer blue">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">App</h5>
+                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2014 Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
+        <!--Import jQuery before materialize.js-->
+        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyC2QUtWOoPG4xLO0_QCTH8a-9bWDIhr-fk",
+                authDomain: "pmecentral.firebaseapp.com",
+                databaseURL: "https://pmecentral.firebaseio.com",
+                projectId: "pmecentral",
+                storageBucket: "pmecentral.appspot.com",
+                messagingSenderId: "844917410964"
+            };
+            firebase.initializeApp(config);
+            var database = firebase.database();
+            var messages = firebase.database().ref('0/go/messages/');
+            messages.on('value', function (snapshot) {
+                $('#loader').hide();
+                var item = snapshot.val();
+                $('#liste').empty();
+                for (it in item) {
+                    var $html = $('#temoin').clone();
+                    $html.find('span').text(item[it].title);
+                    $html.find('p').html(item[it].content);
+                    $html.find('a[data-id]').attr('data-id', it)
+                    $('#liste').prepend($html.show());
+                }
+
+            });
+        </script>
+
+        <script>
+            $(".button-collapse").sideNav();
+            $('ul.tabs').tabs();
+            $('textarea#content').characterCounter();
+
+            $('form#addNew').submit((e) => {
+                e.preventDefault();
+                let date = new Date();
+
+                let data = {
+                    title: $('form#addNew #title').val(),
+                    content: $('form#addNew #content').val(),
+                    enabled: $('form#addNew #enabled').val(),
+                    perimetre: $('form#addNew #perimetre').val(),
+                    created: date
+                }
+                firebase.database().ref('0/go/messages/' + Date.now()).set(data);
+                $.post("/newGo", data, function (data) {
+                    Materialize.toast("l'envoi de notification est en cours...", 4000) // 4000 is the duration of the toast
+                });
+                $('form#addNew #title').val('')
+                $('form#addNew #content').val('');
+
+            });
+
+
+            $("#liste").on("click", "a[data-id]", function () {
+                let id = $(this).attr('data-id')
+                firebase.database().ref('0/go/messages/' + id).remove();
+                Materialize.toast("La suppression a été effectué", 4000) // 4000 is the duration of the toast
+
+            });
+        </script>
+</body>
+
+</html>

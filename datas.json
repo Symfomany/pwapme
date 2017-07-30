@@ -1,0 +1,20 @@
+[
+    {
+        "go": {
+            "messages": {
+                "1501437179271": {
+                    "content": "Ici et là !!!",
+                    "enabled": "true",
+                    "perimetre": "28",
+                    "title": "Super article"
+                }
+            },
+            "tokens": {
+                "1501437179271": {
+                    "created": "1501437179276",
+                    "token": "eYjBVPZKYJ0:APA91bFxRI337UYF1U_BSiN_adgNdcFyCE7N7eafh15MZUCxufX-8QUaEBkPn_2ifRTZfETln8kd5I7vZj6hLZZsps6lPOmNkTePIoxGJIQNt1cAo2-9HnPsPT3FJcU4FMhhwYtl3KQ2"
+                }
+            }
+        }
+    }
+]
